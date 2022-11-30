@@ -27,30 +27,3 @@ response.then((value)=>{
     card.innerHTML += icard
 })
 
-
-//<p class="card-text">description : ${data[item].description}</p>
-const searchFunction = () =>{
-    let search_id = document.getElementById('searchId').value.toUpperCase()
-
-    let cardContainer = document.getElementById('cardContainer')
-
-    let h5 = cardContainer.getElementsByTagName('h5')
-
-    for(i=0;i<h5.length;i++){
-        let h5i = h5[i]
-        // console.log(h5i)
-
-        if(h5i){
-            let textValue=h5i.innerHTML.toUpperCase()
-            if(textValue.indexOf(search_id)>-1){
-                // h5[i].style.display = ''
-                //    cardContainer.style.display = ''
-                // console.log('hey')
-                // !h5[i]   
-            }else{
-                // h5[i].style.display = 'none'
-                cardContainer.style.display = 'none'
-            }
-        }
-    }
-}
